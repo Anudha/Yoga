@@ -1,0 +1,59 @@
+#This file creates an audible routine for practicing the pranayama, anulom-vilom
+#Useful during coding breaks :) 
+
+import pyttsx3
+import time
+
+engine=pyttsx3.init()
+voices=engine.getProperty('voices')
+engine.setProperty('voice', voices[1].id)
+
+rate = engine.getProperty('rate')                         
+engine.setProperty('rate', 200)
+engine.say('Oooom')
+engine.runAndWait()
+                     
+breath_cycle=16
+
+engine.setProperty('rate', 140)
+
+#Beginning instructions
+engine.say('Sit Comfortably.  Use your right hand to create vishnu mudra.')
+engine.runAndWait()
+time.sleep(2)
+engine.say('Use your thumb to close right nostril.  Use your two upright fingers to close the left nostril.')
+engine.runAndWait()
+time.sleep(2)
+engine.say('Release')
+engine.runAndWait()
+time.sleep(1)
+engine.say('Maintain vishnu mudra for practice.  Close eyes. Close right nostril.')
+engine.runAndWait()
+
+
+#Practice
+cycles=4
+for count in range(cycles):
+
+	engine.say('Inhale with left nostril for 4 seconds')
+	engine.runAndWait()
+	time.sleep(breath_cycle/4)
+	engine.say('Close left nostril. Retain for 4 seconds')
+	engine.runAndWait()
+	time.sleep(breath_cycle/4)
+	engine.say('Open right nostril. Exhale for 8 seconds')
+	engine.runAndWait()
+	time.sleep(breath_cycle/2)
+
+	engine.say('Inhale with right nostril for 4 seconds')
+	engine.runAndWait()
+	time.sleep(breath_cycle/4)
+	engine.say('Close right nostril. Retain for 4 seconds')
+	engine.runAndWait()
+	time.sleep(breath_cycle/4)
+	engine.say('Open left nostril. Exhale for 8 seconds')
+	engine.runAndWait()
+	time.sleep(breath_cycle/2)
+
+engine.say('Open both nostrils. Inhale.  Return to regular breath. Slowly open eyes')
+engine.runAndWait()
