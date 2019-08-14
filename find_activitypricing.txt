@@ -1,0 +1,25 @@
+#This script finds the pricing pages of yoga studios near me.  
+
+#import soupsieve
+#import numpy
+import bs4
+import googlesearch
+
+query = "Yoga Studio near me"
+  
+for j in googlesearch.search(query, tld="co.in", num=10, stop=5, pause=2): 
+	#print(j)
+	price=j+"price fee"
+	pricing_page=0;
+
+	for k in googlesearch.search(price, tld="co.in", num=10, stop=2, pause=2):
+		if k!= j:
+			print(k)
+			pricing_page =1
+			break
+		
+	if pricing_page==0: 
+		print('j') #use home page if a distinct pricing page is not found in the first two search results
+
+
+
