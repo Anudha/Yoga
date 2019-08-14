@@ -1,7 +1,7 @@
 # Yoga
 Code to accompany yoga practice
 
-I am building a set of all code that can possibly help continue your yoga practice
+I am building any code that can possibly help continue your yoga practice
 
 In the works are:
 
