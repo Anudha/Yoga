@@ -1,7 +1,5 @@
 #This script finds the pricing pages of yoga studios near me.  
 
-#import soupsieve
-#import numpy
 import bs4
 import googlesearch
 
