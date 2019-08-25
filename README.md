@@ -13,6 +13,6 @@ In the works are:
    
    More features would be nice: open up the URL's, give a visual comparison of prices and distance from you, & suggest times.  
    
-   But I haven't gotten there.  
+
    
    
